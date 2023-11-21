@@ -5,19 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 15:55:21 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/21 09:58:47 by ychahbi          ###   ########.fr       */
+/*   Created: 2023/11/21 09:59:41 by ychahbi           #+#    #+#             */
+/*   Updated: 2023/11/21 10:32:27 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-int main ()
+int main()
 {
-    int N = 5;
+    std::string str = "HI THIS IS BRAIN";
+    std::string *stringPTR = &str;
+    std::string &stringREF = str;
 
-    Zombie *hello = zombieHorde(N, "youssef");
-    for (int i = 0; i < N; i++)
-        hello[i].announce();    
-    delete[] hello;
+    std::cout << "The memory address: " << &str << std::endl;
+    std::cout << "The memory address: " << stringPTR << std::endl;
+    std::cout << "The memory address: " << &stringREF << std::endl;
+
+    std::cout << "The value: " << str << std::endl;
+    std::cout << "The value: " << *stringPTR << std::endl;
+    std::cout << "The value: " << stringREF << std::endl;
 }
