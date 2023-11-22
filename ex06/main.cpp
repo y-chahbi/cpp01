@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 15:55:09 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/22 09:57:59 by ychahbi          ###   ########.fr       */
+/*   Created: 2023/11/21 18:08:37 by ychahbi           #+#    #+#             */
+/*   Updated: 2023/11/22 11:32:26 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-Zombie* zombieHorde(int N, std::string name)
+int main()
 {
-    Zombie *zombieHorde = new Zombie[N];
+    Harl test;
 
-    for (int i = 0; i < N; i++)
-        zombieHorde[i].setName(name);
-    return (zombieHorde);
+    test.complain("Debug");
 }

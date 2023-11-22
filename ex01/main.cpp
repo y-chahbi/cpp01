@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:55:21 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/21 09:58:47 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/11/22 09:53:46 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ int main ()
     Zombie *hello = zombieHorde(N, "youssef");
     for (int i = 0; i < N; i++)
         hello[i].announce();    
-    delete[] hello;
+    delete [] hello;
 }
