@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:08:37 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/22 10:58:16 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/13 11:49:11 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int main()
 {
     Harl test;
 
-    test.complain("Error");
+    test.complain("WARNING");
 }

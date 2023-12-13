@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:05:03 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/24 11:26:03 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/13 11:42:45 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,13 @@ HandFile::HandFile(std::string fn, std::string s1, std::string s2)
 
 void    HandFile::replace(void)
 {
-    int     tmp = -1;
-    int     ss1 = s1.length();
-    int     ss2 = s2.length();
+    size_t  tmp = std::string::npos;
+    int     sl = s1.length();
 
-    while (theContent.find(s1) != -1 && theContent.find(s1) != tmp)
+    while (theContent.find(s1) != std::string::npos && theContent.find(s1) != tmp)
     {
         tmp = theContent.find(s1);
-        theContent.erase(tmp, ss1);
+        theContent.erase(tmp, sl);
         theContent.insert(tmp, s2);
     }
 }
@@ -49,7 +48,7 @@ void    HandFile::replace(void)
 void    HandFile::showError(std::string Error)
 {
     std::cout << Error << std::endl;
-    exit(0);
+    exit(1);
 }
 
 void    HandFile::doneRe(void)

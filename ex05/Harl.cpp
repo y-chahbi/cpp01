@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:08:34 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/22 10:57:43 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/13 11:48:57 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ Harl::Harl()
     fun[1] = &Harl::info;
     fun[2] = &Harl::warning;
     fun[3] = &Harl::error;
-    funIndex[0] = "Debug";
-    funIndex[1] = "Info";
-    funIndex[2] = "Warning";
-    funIndex[3] = "Error";
+    funIndex[0] = "DEBUG";
+    funIndex[1] = "INFO";
+    funIndex[2] = "WARNING";
+    funIndex[3] = "ERROR";
 }
