@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:08:32 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/22 10:58:59 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/13 17:21:38 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ class Harl
         void        complain( std::string level );
         std::string funIndex[4];
 };
+
 
 #endif

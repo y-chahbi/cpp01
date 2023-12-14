@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:05:03 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/13 11:42:45 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/14 10:15:41 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,23 @@ HandFile::HandFile(std::string fn, std::string s1, std::string s2)
 {
     std::string     tmp;
     std::string     content;
-    std::ifstream   inputFile(fn);
+    std::ifstream   read(fn);
 
 
-    if (!inputFile.is_open())
+    if (!read.is_open())
         showError("the file is not exsit or its unreadable!");
     else
     {
-        while (std::getline(inputFile, tmp))
+        while (std::getline(read, tmp))
             content = content + tmp + '\n';
         this->s1 = s1;
         this->s2 = s2;
+        this->filename = fn;
     }
-    setContent(content);
+    read.close();
+    this->theContent = content;
     replace();
+    putTofile();
 }
 
 void    HandFile::replace(void)
@@ -47,7 +50,7 @@ void    HandFile::replace(void)
 
 void    HandFile::showError(std::string Error)
 {
-    std::cout << Error << std::endl;
+    std::cerr << Error << std::endl;
     exit(1);
 }
 
@@ -56,12 +59,17 @@ void    HandFile::doneRe(void)
     std::cout << "The file just copied and replaced!" << std::endl;
 }
 
-void    HandFile::setContent(std::string cont)
-{
-    this->theContent = cont;
-}
-
 void    HandFile::getContent(void)
 {
     std::cout << theContent << std::endl;
+}
+
+void    HandFile::putTofile()
+{
+    this->NewFile = filename + ".replace";
+    std::ofstream put(this->NewFile);
+    if (!put.is_open())
+        showError("The file Created from this program is having some problems!");
+    put << theContent;
+    put.close();
 }

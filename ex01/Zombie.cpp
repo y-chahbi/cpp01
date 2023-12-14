@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:55:15 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/21 09:25:24 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/13 14:35:20 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void    Zombie::announce()
 {
-    std::cout << name << " Zombie had been created succefully" << std::endl;
+    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 void    Zombie::setName(std::string name)
