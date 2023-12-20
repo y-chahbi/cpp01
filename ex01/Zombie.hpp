@@ -6,9 +6,12 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:55:13 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/11/21 09:13:08 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/20 11:01:03 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
 #include <iostream>
 
@@ -24,3 +27,5 @@ class Zombie
 };
 
 Zombie* zombieHorde( int N, std::string name );
+
+#endif
