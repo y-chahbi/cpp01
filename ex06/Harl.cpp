@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:08:34 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/13 11:55:21 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/20 10:56:54 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void    Harl::complain(std::string level)
     int     dex;
 
     for (int *ind = &index; *ind < 4 && funIndex[*ind] != level; (*ind)++);
-    
+
     dex = index;
     switch (index)
     {

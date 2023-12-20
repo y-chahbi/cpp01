@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 18:08:37 by ychahbi           #+#    #+#             */
-/*   Updated: 2023/12/13 11:53:43 by ychahbi          ###   ########.fr       */
+/*   Updated: 2023/12/20 10:56:34 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(int ac, char **av)
 {
     Harl test;
-    (void)ac;
 
-    test.complain(av[1]);
+    if (ac == 2)
+        test.complain(av[1]);
 }
